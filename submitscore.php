@@ -6,7 +6,7 @@ $name = $_POST["name"];
 $score = $_POST["score"];
 
 $query = "INSERT INTO highscores (name, score, date) 
-				VALUES ($name, $score, NOW())";
+				VALUES ('$name', '$score', NOW())";
 
 mysqli_query($dbc,$query);
 

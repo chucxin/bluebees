@@ -5,11 +5,11 @@ $query = "SELECT name, score FROM highscores";
 
 $data = mysqli_query($dbc,$query);
 
-$result = [];
+$result = array();
 
 for($i=0;$i<mysqli_num_rows($data);$i++){
 	$row = mysqli_fetch_array($data);
-	$result .= [$row["name"], $row["score"]];
+	$result[] = array($row["name"], $row["score"]);
 }
 
 echo json_encode($result);

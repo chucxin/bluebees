@@ -144,7 +144,7 @@ $("#closehighscores").mousedown(function(){
 function refreshHighscores(){
 	game.highscores = [];
 	$("#highscorestable").html("");
-	$.getJSON("highscores.php", function(json){
+	$.getJSON("highscores.php", function(result){
 
 		// $(xml).find("case").each(function(){
 		// 	var name = $(this).find("name").text();
@@ -153,20 +153,20 @@ function refreshHighscores(){
 		// 	scores.push([name, score]);
 		// })
 
-
+		console.log(result);
 
 		// 排序
-		while(json.length > 0){
-			for(var i in json){
+		while(result.length > 0){
+			for(var i in result){
 				var yn = true;
-				for(var ii in json){
-					if(parseInt(json[i][1]) < parseInt(json[ii][1])) {
+				for(var ii in result){
+					if(parseInt(result[i][1]) < parseInt(result[ii][1])) {
 						yn = false;
 					}
 				}
 				if(yn){
-					game.highscores.push(json[i]);
-					json.splice(i, 1);
+					game.highscores.push(result[i]);
+					result.splice(i, 1);
 				}
 			}
 		}
