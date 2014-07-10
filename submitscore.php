@@ -1,22 +1,34 @@
 <?php
 
+$dbc = mysqli_connect("localhost", "chucxin2", "heiyanjing", "bluebees");
+
 $name = $_POST["name"];
 $score = $_POST["score"];
 
-$xml = simplexml_load_file("highscores.xml");
+$query = "INSERT INTO highscores (name, score, date) 
+				VALUES ($name, $score, NOW())";
 
-$new = $xml->addChild("case","");
-$new->addChild("name", $name);
-$new->addChild("score", $score);
+mysqli_query($dbc,$query);
 
-$newxml = $xml->asXML();
+echo "success";
 
-$file = fopen("highscores.xml", "w");
-fwrite($file, $newxml);
 
-fclose($fil);
 
-echo $newxml;
+
+// $xml = simplexml_load_file("highscores.xml");
+
+// $new = $xml->addChild("case","");
+// $new->addChild("name", $name);
+// $new->addChild("score", $score);
+
+// $newxml = $xml->asXML();
+
+// $file = fopen("highscores.xml", "w");
+// fwrite($file, $newxml);
+
+// fclose($fil);
+
+// echo $newxml;
 
 
 ?>
