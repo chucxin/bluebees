@@ -144,27 +144,29 @@ $("#closehighscores").mousedown(function(){
 function refreshHighscores(){
 	game.highscores = [];
 	$("#highscorestable").html("");
-	$.get("highscores.xml", function(xml){
-		var scores = [];
+	$.getJSON("highscores.php", function(json){
 
-		$(xml).find("case").each(function(){
-			var name = $(this).find("name").text();
-			var score = $(this).find("score").text();
-			console.log(name+" "+score);
-			scores.push([name, score]);
-		})
+		// $(xml).find("case").each(function(){
+		// 	var name = $(this).find("name").text();
+		// 	var score = $(this).find("score").text();
+		// 	console.log(name+" "+score);
+		// 	scores.push([name, score]);
+		// })
+
+
+
 		// 排序
-		while(scores.length > 0){
-			for(var i in scores){
+		while(json.length > 0){
+			for(var i in json){
 				var yn = true;
-				for(var ii in scores){
-					if(parseInt(scores[i][1]) < parseInt(scores[ii][1])) {
+				for(var ii in json){
+					if(parseInt(json[i][1]) < parseInt(json[ii][1])) {
 						yn = false;
 					}
 				}
 				if(yn){
-					game.highscores.push(scores[i]);
-					scores.splice(i, 1);
+					game.highscores.push(json[i]);
+					json.splice(i, 1);
 				}
 			}
 		}
