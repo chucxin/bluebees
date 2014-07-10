@@ -1,0 +1,421 @@
+#allgame {
+	width: 940px;
+	height:600px;
+	display: block;
+}
+
+
+#gameground {
+	width: 720px;
+	height: 555px;
+	display: inline-block;
+	position: relative;
+}
+
+#game {
+	width:720px;
+	display: block;
+	position: absolute;
+}
+
+
+.col1 {
+	margin-left: 115px;
+}
+.col2 {
+	margin-left: 57px;
+	margin-top: -35px;
+}
+.col3 {
+	margin-left: 0px;
+	margin-top: -35px;
+}
+.col4 {
+	margin-left: 57px;
+	margin-top: -35px;
+}
+.col5 {
+	margin-left: 115px;
+	margin-top: -35px;
+}
+
+
+.frame {
+	width: 112px;
+	height: 132px;
+	display: block;
+	position: absolute;
+
+	-webkit-transition:all 0.4s;
+	-webkit-backface-visibility:hidden;
+	transition:all 0.4s;
+	backface-visibility:hidden;
+	
+}
+
+.bigframe {
+	width: 112px;
+	height: 134px;
+	display: inline-block;
+	position: relative;
+}
+
+
+.rect {
+	/*width: 112px;
+	height: 64px;*/
+	width:106px;
+	height:64px;
+	position: absolute;
+	float: left;
+	cursor: pointer;
+	top: 33px;
+	border-left: 3px solid #E8C53A;
+	border-right: 3px solid #E8C53A;
+}
+
+.rect1 {
+	-webkit-transform: rotate(-60deg);
+	-ms-transform: rotate(-60deg);
+	-moz-transform: rotate(-60deg);
+	-o-transform: rotate(-60deg);
+	transform: rotate(-60deg);
+}
+
+.rect2 {
+	-webkit-transform: rotate(60deg);
+	-ms-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	-o-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+
+.aa {
+	background-color: #F5F071;
+}
+.bb {
+	background-color: #D6D6D6;
+}
+
+.image {
+	width: 112px;
+	height: 132px;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: 12px 14px;
+}
+
+.a {
+	z-index:10;
+
+}
+.b {
+	z-index:8;
+	-webkit-transform:rotate3d(0,1,0,-180deg);
+	-ms-transform:rotate3d(0,1,0,-180deg);
+	-moz-transform:rotate3d(0,1,0,-180deg);
+	-o-transform:rotate3d(0,1,0,-180deg);
+	transform:rotate3d(0,1,0,-180deg);
+}
+
+.flipped .a {
+
+	-webkit-transform:rotate3d(0,1,0,180deg);
+	-ms-transform:rotate3d(0,1,0,180deg);
+	-moz-transform:rotate3d(0,1,0,180deg);
+	-o-transform:rotate3d(0,1,0,180deg);
+	transform:rotate3d(0,1,0,180deg);
+	z-index:8;
+}
+.flipped .b {
+	-webkit-transform:rotate3d(0,1,0,0deg);
+	-ms-transform:rotate3d(0,1,0,0deg);
+	-moz-transform:rotate3d(0,1,0,0deg);
+	-o-transform:rotate3d(0,1,0,0deg);
+	transform:rotate3d(0,1,0,0deg);
+	z-index:10;
+}
+
+
+
+/*结束时的窗口*/
+#transparency {
+	width: 720px;
+	height: 560px;
+
+	display: none;
+	position: absolute;
+	background-color: #ffffff;
+	opacity: 0.7;
+	z-index: 1000;
+}
+#win {
+	width: 720px;
+	height: 560px;
+	display: none;
+	position: absolute;
+	z-index: 1001;
+}
+	#youwin {
+		width:100%;
+		display: block;
+		text-align: center;
+		font-size: 60px;
+		font-family: helvetica;
+		color: #5DA0FC;
+		margin-top: 100px;
+	}
+	#yourscore {
+		width:100%;
+		display: block;
+		text-align: center;
+		font-size: 30px;
+		font-family: helvetica;
+		color: #5da0fc;
+		margin-bottom: 20px;
+	}
+		#displayscore {
+			color: #FF8800;
+			font-size: 33px;
+			font-family: helvetica;
+		}
+
+#lose {
+	width: 720px;
+	height: 560px;
+	display: none;
+	position: absolute;
+	z-index: 1001;
+}
+	#youlose {
+		width:100%;
+		display: block;
+		text-align: center;
+		font-size: 60px;
+		font-family: helvetica;
+		color: #FC5D7B;
+		margin-top: 100px;
+		margin-bottom: 30px;
+	}
+
+#submit {
+	width: 720px;
+	height: 560px;
+	display: none;
+	position: absolute;
+	z-index: 1001;
+}
+	#submittitle {
+		width:100%;
+		display: block;
+		text-align: center;
+		font-size: 60px;
+		font-family: helvetica;
+		color: #5DA0FC;
+		margin-top: 100px;
+		margin-bottom: 30px;
+	}
+	#submitinputdiv {
+		width:100%;
+		text-align: center;
+		font-size: 28px;
+		font-family: helvetica;
+		color: #5DA0FC;
+		margin-bottom: 20px;
+	}
+		#submitinput {
+			width:100px;
+			height: 30px;
+			font-size: 25px;
+		}
+
+#highscores {
+	width: 720px;
+	height: 560px;
+	display: none;
+	position: absolute;
+	z-index: 1002;
+}
+	#highscorestitle {
+		width:100%;
+		display: block;
+		text-align: center;
+		font-size: 45px;
+		font-family: helvetica;
+		color: #5DA0FC;
+		margin-top: 50px;
+		margin-bottom: 30px;
+	}
+	#highscoresdiv {
+		width:300px;
+		height:200px;
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: 10px;
+		overflow-Y: scroll;
+	}
+		#highscorestable {
+			width: 100%;
+			font-family: helvetica;
+			color: #6B3B04;
+			font-size: 16px;
+		}
+		#highscorestable td {
+			text-align: center;
+		}
+
+
+
+.button1 {
+	width:250px;
+	height:50px;
+	line-height: 50px;
+	display: block;
+	text-align: center;
+	font-size: 30px;
+	font-family: helvetica;
+	color: #ffffff;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	background-color: #fcb95d;
+	cursor: pointer;
+
+}
+
+
+/*右面板*/
+#panel {
+	width:200px;
+	height:600px;
+	display: inline-block;
+	float: right;
+}
+	.paneltitle {
+		width:100%;
+		height:35px;
+		display: block;
+		text-align: center;
+		font-size: 25px;
+		font-family: helvetica;
+		color: #D6BD00;
+	}
+	.panelcontent {
+		width:100%;
+		height:80px;
+		display: block;
+		text-align: center;
+		font-size: 60px;
+		font-family: helvetica;
+		color: #FF8800;
+	}
+	.button2 {
+		width:180px;
+		height:40px;
+		line-height: 40px;
+		display: block;
+		text-align: center;
+		font-size: 30px;
+		font-family: helvetica;
+		color: #ffffff;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 10px;
+		background-color: #fcb95d;
+		cursor: pointer;
+	}
+
+#by {
+	width: 100%;
+	display: block;
+	text-align: center;
+	font-size: 12px;
+	font-family: helvetica;
+	margin-top: 10px;
+	position: relative;
+}
+
+
+/* guide */
+#guide {
+	width: 100%;
+	display: block;
+	position: relative;
+	font-size: 10px;
+	font-family: helvetica;
+	text-align: center;
+	color: #ABA9AB;
+}
+
+#link {
+	width:500px;
+	margin-right: auto;
+	margin-left: auto;
+	color: #999999;
+	text-align:center;
+
+}
+
+/* share to facebook */
+#share {
+	width: 60px;
+	margin-left: 65px;
+	text-align: right;
+	padding-right: 3px;
+	position: relative;
+	line-height: 18px;
+	display: inline-block;
+    background-color:#5D7DAE;
+    border:1px solid #0D386F;
+    border-radius: 3px;
+    height: 16px;
+    font-size: 14px;
+    color: #ffffff;
+    background-image: url(images/fbicon.png);
+    background-repeat: no-repeat;
+    background-position: 2px 2px;
+
+
+}
+
+#sharediv {
+    border:1px solid #0D386F;
+    background-color:#5D7DAE;
+    height:20px;
+    width: 100px;
+    position: relative;
+
+}
+/*
+#sharediv a.click {
+    font-size:13px;
+    font-weight:bold;
+    text-align:center;
+    color:#fff;
+    border-top:1px solid #879DC2;
+    background-color:#5D7DAE;
+    padding: 2px 10px;
+    cursor: pointer;
+    text-decoration:none;
+    width:80px;
+    display:block;
+}*/
+
+
+/**/
+a {
+	text-decoration: none;
+	color: #000AFF;
+}
+a:visited {
+	color: #000AFF;
+}
+a:hover {
+	text-decoration: none;
+}
+
+
+
+
+
+
